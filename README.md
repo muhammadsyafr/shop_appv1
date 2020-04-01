@@ -1,8 +1,18 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 ## Name
-Muhammad Syafrizal Noor Abdillah 
-Endrayana Wisnu Brata R
+- **Muhammad Syafrizal Noor Abdillah**
+- **Endrayana Wisnu Brata R**
+
+## How to install
+1. git clone https://github.com/muhammadsyafr/shop_app
+2. run **composer install** on terminal
+3. npm install ( make sure Node.js was installed on your machine)
+4. run **"cp .env.example .env "** on terminal
+5. run **php artisan key:generate**
+6. create empty database
+7. Migrate the database with this command **php artisan migrate**
+8. run **php artisan serve**
 
 ## About Laravel
 
