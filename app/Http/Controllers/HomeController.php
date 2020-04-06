@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Barang;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        
     }
 
     /**
@@ -23,6 +23,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $barangs = Barang::paginate(8);
+        // dd($barangs);
+        return view('home', compact('barangs'));
+    }
+
+    public function profile()
+    {
+        $this->middleware('auth');
+        return view('profile');
     }
 }

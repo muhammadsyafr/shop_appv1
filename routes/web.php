@@ -9,6 +9,8 @@ Auth::routes();
 // Client Routing
 Route::get('/','HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'HomeController@profile
+')->name('profile');
 
 
 // Admin Routing
