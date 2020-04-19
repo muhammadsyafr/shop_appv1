@@ -16,6 +16,8 @@
 
 ## Running Seeds Factory
 > php artisan db:seed --class=BarangsTableSeeder
+> if running seeds error try 
+> <i>composer dump-autoload</i>
 
 ## About Laravel
 

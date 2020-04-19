@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Barang;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -23,9 +23,11 @@ class AdminController extends Controller
 
     public function dataBarang()
     {
+        $barangs = Barang::all();
         $data = [
             'title' => 'Data Barang',
-            'content' => 'This is Data Barang'
+            'content' => 'This is Data Barang',
+            'data' => $barangs
         ];
 
         return view('admin/data_barang', $data);
