@@ -17,6 +17,10 @@ class User extends Authenticatable
         return $this->type === self::ADMIN_TYPE;
     }
 
+    public function pesanan(){
+        return $this->hasMany('App\Pesanan', 'user_id', 'id');
+    }
+
     use Notifiable;
 
     /**

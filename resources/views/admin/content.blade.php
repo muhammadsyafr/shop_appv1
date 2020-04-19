@@ -6,6 +6,13 @@
 
 @section('content')
 <div class="jumbotron">
-    <h1>Hai <?= $content; ?> </h1>
+    @foreach($data as $barang)
+        <h1>{{$barang->nama_barang}} </h1>
+        @foreach($barang->kategori as $kategori)
+            <h2>{{$kategori->nama_kategori}} </h2>
+        @endforeach
+    @endforeach
 </div>
+
+
 @endsection

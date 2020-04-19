@@ -16,4 +16,7 @@ Route::get('/profile', 'HomeController@profile')->name('profile');
 Route::middleware('is_admin')->group(function () {
     Route::get('/admin/dashboard', 'AdminController@index')->name('dashboard');
     Route::get('/admin/data_barang', 'AdminController@dataBarang')->name('data_barang');
+
+    // add barang
+    Route::get('/addBarang', 'AdminController@createBarang')->name('create');
 });
